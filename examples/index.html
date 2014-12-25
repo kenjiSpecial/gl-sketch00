@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>gl-sketch00 Examples</title>
+    <link rel="stylesheet" href="normalize.css"/>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+
+    attribute vec4 a_Position;
+    attribute vec4 a_Color;
+
+    uniform mat4 u_xformMatrix;
+
+    varying vec4 v_Color;
+    void main() {
+        gl_Position = u_xformMatrix * a_Position;
+        v_Color = a_Color;
+    }
+
+    </script>
+    <!-- fragment shader -->
+    <script id="fragment-shader" type="x-shader/x-fragment">
+
+    #ifdef GL_ES
+    precision mediump float;
+    #endif GL_ES
+    varying vec4 v_Color;
+    void main() {
+      gl_FragColor = v_Color;
+    }
+    </script>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<script type="text/javascript" src="gl-sketch00.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "author": "Kenji Saito <k.saito.1985@gmail.com> (http://kenji-special.info)",
+  "name": "gl-sketch00",
+  "description": "beefy-fun",
+  "version": "0.0.1",
+  "homepage": "https://github.com/kenjiSpecial/gl-sketch00",
+  "repository": {
+    "url": "https://github.com/kenjiSpecial/gl-sketch00"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "beefy ../lib/index.js:gl-sketch00.js --cwd ./examples -- -r ./lib/index.js:gl-sketch00",
+    "test": "tap ./test/*.js"
+  },
+  "devDependencies": {
+    "beefy": "~0.4.1",
+    "browserify": "~2.26.0",
+    "tap": "~0.3.1"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">=0.6"
+  }
+}
